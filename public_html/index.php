@@ -26,6 +26,9 @@ $form->addElement('checkbox', 'useNumbers', 'Use integers(0-9):');
 $form->addElement('checkbox', 'useChars', 'Use symbols (!$%^...):');
 $form->addElement('submit', null, 'Generate!');
 
+// Rules
+$form->addRule('length', 'Length is required', 'required', '', 'client');
+$form->addRule('lines', 'Number of strings required', 'required', '', 'client');
 
 // Output
 echo "<html><body><center>\n";
